@@ -32,8 +32,5 @@ df.to_excel(NomeArquivo, index=False)
 print('Pronto!')
 
 
-# In[ ]:
-
-
 
 
