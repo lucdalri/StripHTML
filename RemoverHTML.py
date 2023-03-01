@@ -1,4 +1,5 @@
 import pandas as pd
+from pandas.io.formats import excel
 from bs4 import BeautifulSoup
 
 #Definindo a identificação do arquivo:
@@ -14,6 +15,9 @@ def RemoverHTML(texto):
 
 # Importando o arquivo CSV com código HTML:
 df = pd.read_csv(r'CAMINHO DO ARQUIVO', encoding='iso-8859-1')
+
+#Remover formato da Header
+excel.ExcelFormatter.header_style = None
 
 # Aplicar a função a todos os elementos do DataFrame:
 df = df.applymap(RemoverHTML)
