@@ -24,7 +24,7 @@ df = df.applymap(RemoverHTML)
 
 # Exportar o arquivo em formato excel sem entidades HTML:
 NomeArquivo = id + '.xlsx'
-df.to_excel(NomeArquivo, index=False)
+df.to_excel(NomeArquivo, engine = 'xlsxwriter'  index=False)
 
 #Indicação de finalização:
 print('Pronto!')
